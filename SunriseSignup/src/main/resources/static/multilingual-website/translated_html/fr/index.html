@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sunrise Rotary</title>
+<link href="styles.css" rel="stylesheet"/>
+<link href="/imgs1/icontop.png" rel="icon" type="image/png"/>
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
+</head>
+<body>
+<style>
+		/* Reset some default styling */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+   
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding-top: 90px; /* Ensure content doesn't go under the header */
+}
+
+ .navbar {
+            background-color: white;
+            color: #fff;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            
+        }
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+   
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.logo {
+ width: 80%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #004579;
+   
+    transition: color 0.3s;
+    font-weight: bold;
+    
+}
+
+nav ul li a:hover {
+     color: #f0a500;
+}
+
+nav ul li a[style*="color: #004579;"] {
+    color: #004579; /* Keep the active link color */
+}
+
+
+
+.cta-button {
+    background: #f39c12;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #e67e22;
+}
+
+.hero {
+    background: url('/imgs1/contactimg.webp') no-repeat center center/cover;
+    color: black;
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeIn 2s 1s forwards;
+    color: white;
+}
+
+.hero .cta-button {
+    opacity: 0;
+    animation: fadeIn 2s 2s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.about-preview, .featured-projects, .upcoming-events, .news-updates, .testimonials {
+    padding: 50px 0;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #003366;
+}
+
+.project, .event, .news-item {
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.project:hover, .event:hover, .news-item:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.social-media a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.newsletter {
+    display: inline-block;
+    margin-top: 10px;
+    background: #f39c12;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #fff;
+    transition: background 0.3s ease;
+}
+
+.newsletter:hover {
+    background: #e67e22;
+}
+ .hero-section {
+    background-image: url('/imgs1/home1.jpg'); /* Default background image */
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: #333;
+    overflow: hidden; /* Hide overflow */
+    text-align: center; /* Center-align text */
+}
+
+.container {
+    z-index: 1; /* Bring the container on top of the background image */
+}
+
+h1 {
+    font-size: 3rem; /* Adjust font size */
+    font-weight: bold; /* Make the text bold */
+    margin-bottom: 20px; /* Add space below the heading */
+    animation: fadeInDown 2s ease-out; /* Apply fade-in-down animation */
+}
+
+p {
+    font-size: 1.2rem; /* Adjust font size */
+    line-height: 1.6; /* Increase line height for readability */
+    margin-bottom: 30px; /* Add space below the paragraph */
+    animation: fadeInUp 2s ease-out; /* Apply fade-in-up animation */
+    max-width: 800px; /* Limit the width for better readability */
+    margin-left: auto;
+    margin-right: auto; /* Center the paragraph */
+}
+
+.btn-primary {
+    background-color: #004579; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.5rem; /* Button font size */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+    animation: fadeInUp 2s ease-out 1s; /* Apply fade-in-up animation with delay */
+    height: 100%;
+}
+
+.btn-primary:hover {
+    background-color: #e67e22; /* Darker background on hover */
+}
+
+/* Animated Background Styles */
+.animated-background {
+	background-color:  rgb(241, 249, 254);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%; /* Accommodate three background images */
+    height: 100%;
+}
+
+.bg-layer {
+    position: relative;
+    float: left;
+    width: 33.33%; /* Accommodate three background images */
+    height: 100%;
+    object-fit: cover;
+}
+
+.bg-layer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Add animation to the background images */
+.animated-background {
+    animation: animateBackground 80s linear infinite;
+}
+
+@keyframes animateBackground {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Section Styling */
+.info-section {
+    background-color: rgb(241, 249, 254);
+    position: relative;
+    min-height: 600px;
+    padding: 50px;
+}
+
+/* Container Styling */
+.container {
+    position: relative;
+}
+
+/* Aligning Content */
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Left Content Styling */
+.text-left {
+    text-align: left;
+}
+
+/* Heading and Paragraph Styling */
+.lead {
+    font-size: 36px;
+    font-weight: bold;
+    color: #004579;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    color: #263238;
+    margin-bottom: 20px;
+}
+
+p:last-of-type {
+    margin-bottom: 40px;
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: #004579;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-primary:hover {
+    background-color: #003366;
+}
+
+.btn-primary .fa-angle-right {
+    margin-left: 8px;
+    color: #fff;
+}
+
+/* Image Styling */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-left: 20%;
+}
+	/* Hero Section */
+.hero {
+    background: url('/imgs1/homeimg.jpg') no-repeat center center;
+    background-size: cover;
+    min-height: 600px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #004579;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #003366;
+}
+
+/* About Section */
+.about-preview {
+    background-color: #f0f8ff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about-preview h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-preview p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.about-preview a {
+    font-size: 1rem;
+    color: #004579;
+    text-decoration: none;
+}
+
+.about-preview a:hover {
+    text-decoration: underline;
+}
+
+/* Featured Projects Section */
+.featured-projects {
+    padding: 50px 0;
+    text-align: center;
+   
+}
+
+.featured-projects h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.featured-projects .project {
+    margin-bottom: 20px;
+}
+
+.featured-projects img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.featured-projects p {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.featured-projects a {
+    font-size: 1rem;
+    color: #004579;
+    text-decoration: none;
+}
+
+.featured-projects a:hover {
+    text-decoration: underline;
+}
+
+/* Upcoming Events Section */
+.upcoming-events {
+    background-color:  rgb(241, 249, 254);;
+    padding: 50px 0;
+}
+
+.upcoming-events h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.upcoming-events .event {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.upcoming-events a {
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    color: #004579;
+    text-decoration: none;
+}
+
+.upcoming-events a:hover {
+    text-decoration: underline;
+}
+
+/* News Updates Section */
+.news-updates {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.news-updates h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.news-updates .news-item {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.news-updates a {
+    font-size: 1rem;
+    color: #004579;
+    text-decoration: none;
+}
+
+.news-updates a:hover {
+    text-decoration: underline;
+}
+       
+/* Footer */
+.footer {
+    
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+      background-color:#004579;
+}
+
+.footer .social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer .social-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer .social-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer .social-links li a:hover {
+    text-decoration: underline;
+}
+/* Add this to your existing CSS */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #004579;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+ /* Toggle Button */
+        .navbar .menu-toggle {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: #004579;
+        }
+/* Media Queries */
+@media (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        width: 95%;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+        /* Media Queries for Mobile */
+        @media (max-width: 768px) {
+            .navbar .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar .logo img {
+                width: 360px;
+            }
+
+            .navbar .menu {
+                display: none;
+                flex-direction: column;
+            }
+         
+
+            .navbar .menu li {
+                margin: 0 0;
+            }
+
+            .navbar .menu-toggle {
+                display: block;
+            }
+
+            .navbar .menu.active {
+                display: flex;
+                width: 100%;
+            }
+            .menu-toggle {
+        display: block;
+    }
+    .menu {
+        display: none;
+    }
+    .menu.active {
+        display: flex;
+    }
+        }
+@media (max-width: 480px) {
+    header {
+        padding: 5px 0; /* Reduce padding for a smaller header height */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px; /* Space between menu items */
+    }
+
+    nav ul li a {
+        font-size: 0.8rem; /* Reduce font size for mobile */
+        padding: 8px 0; /* Adjust padding for each menu item */
+    }
+}
+/* Hamburger menu styles */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    height: 3px;
+    background: #004579;
+    margin: 5px 0;
+    width: 25px;
+}
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
+
+   
+
+    nav.active {
+        display: flex; /* Show nav when active */
+        flex-direction: column;
+        width: 100%;
+        background: #ffffff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        text-align: center;
+        width: 100%;
+    }
+}
+nav.active {
+    display: block; /* Add this line */
+}
+
+
+
+
+
+	</style>
+<nav class="navbar">
+<div class="container">
+<div class="logo">
+<a href="/"><img alt="Sunrise Rotary Club Logo" src="/imgs1/Sunrise Rotary.png"/></a>
+</div>
+<span class="menu-toggle" id="menu-toggle">☰</span>
+<ul class="menu" id="menu">
+<li><a href="/">Domicile</a></li>
+<li><a th:href="@{/api/about/}">Qui sommes-nous</a></li>
+<li><a th:href="@{/api/news/}">Actualités-Médias</a></li>
+<li><a th:href="@{/api/serviceprojects/}">Projets de service</a></li>
+<li><a th:href="@{/api/contact/}">Contactez-nous</a></li>
+<li><a th:href="@{/api/login}">Connectez-vous</a></li>
+<div id="google_translate_element"></div>
+</ul>
+</div>
+</nav>
+<section class="hero-section">
+<div class="container">
+<div class="row">
+<div class="col-lg-6 offset-lg-3" style="height: 90%;">
+<h1 class="animated fadeInDown">Image par Grateful Smile</h1>
+<p class="animated fadeInUp" style="color: white;">Imaginez la différence que votre temps pourrait faire. C’est ce que vos compétences pourraient mettre à profit. Imaginez qu’un simple « merci » ou un sourire soit votre récompense. Imaginez la différence que vous pourriez faire.</p>
+<a class="btn-primary" th:href="@{/api/contact/}">Rejoignez le Rotary</a>
+</div>
+</div>
+</div>
+<div class="animated-background">
+<div class="bg-layer">
+<img alt="Background Image" src="/imgs1/home1.jpg"/>
+</div>
+<div class="bg-layer">
+<img alt="Background Image" src="/imgs1/home2.jpg"/>
+</div>
+<div class="bg-layer">
+<img alt="Background Image" src="/imgs1/home3.jpg"/>
+</div>
+</div>
+</section>
+<section class="info-section">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-md-6 text-left">
+<h1 class="lead">SUNRISE ROTATIF</h1>
+<p>SunRiseRotary, une branche du Rotary International, se consacre à la création de changements positifs et durables dans les communautés locales et mondiales. Nous nous concentrons sur l’amélioration du service humanitaire, la promotion du développement communautaire et l’autonomisation des jeunes par le biais de divers projets percutants.</p>
+<p>Nos initiatives en matière de santé et de bien-être améliorent l’accès aux soins de santé et favorisent la prévention des maladies. Nous améliorons les possibilités d’éducation grâce à des bourses d’études, des campagnes d’alphabétisation et des formations professionnelles. Les efforts de conservation de l’environnement comprennent la plantation d’arbres et des campagnes de nettoyage. De plus, nous soutenons l’autonomisation des jeunes par le développement du leadership et le mentorat.</p>
+<p>Grâce à ces efforts globaux, SunRiseRotary incarne le véritable esprit du Rotary International, démontrant un engagement inébranlable à servir avant soi. Notre dévouement à ces causes reflète notre conviction qu’il est important de créer des changements durables et positifs. Nous sommes passionnés par la construction d’un monde meilleur pour tous, en favorisant un sentiment d’espoir et en favorisant le progrès pour les générations futures.</p>
+<a class="btn btn-primary" th:href="@{/api/serviceprojects/}">Explore More <span class="fa fa-angle-right"></span></a>
+</div>
+<div class="col-md-6">
+<img alt="" class="img-fluid rounded" src="web/image/282-bb5fc02f/istockphoto-1144159068-612x612.webp"/>
+</div>
+</div>
+</div>
+</section>
+<section class="hero">
+<div class="hero-content">
+<h1>Transformer des vies par le service</h1>
+<p style="color: white;">Faites partie d’un mouvement mondial pour faire une différence significative dans les communautés du monde entier.</p>
+<a class="cta-button" th:href="@{/api/donate/}">Impliquez-vous</a>
+</div>
+</section>
+<section class="about-preview">
+<div class="container">
+<h2>Notre mission</h2>
+<p>Chez Sunrise Rotary, nous nous engageons à relever les défis les plus difficiles du monde grâce à un service dédié et à des projets percutants. Notre mission est de créer un changement durable et de bâtir des communautés plus fortes.</p>
+</div>
+</section>
+<section class="featured-projects">
+<div class="container">
+<h2>Nos initiatives</h2>
+<div class="project">
+<img alt="Community Health Initiative" src="/imgs1/community.png"/>
+<p>Initiative de santé communautaire : Fournir des soins médicaux essentiels et une éducation sanitaire aux zones mal desservies.</p>
+</div>
+<div class="project">
+<img alt="Education Enhancement" src="/imgs1/eduhome.jpeg"/>
+<p>Amélioration de l’éducation : Soutenir les écoles en leur offrant des ressources, des bourses d’études et des possibilités d’apprentissage pour les jeunes.</p>
+</div>
+</div>
+</section>
+<section class="upcoming-events">
+<div class="container">
+<h2>Activités à venir</h2>
+<div id="eventsList"></div>
+<a th:href="@{/api/login}">Gestion des événements</a>
+</div>
+</section>
+<script>
+        function loadEvents() {
+            const events = JSON.parse(localStorage.getItem('events')) || [];
+            const eventsList = document.getElementById('eventsList');
+            eventsList.innerHTML = '';
+            events.forEach(event => {
+                const eventDiv = document.createElement('div');
+                eventDiv.classList.add('event');
+                eventDiv.innerHTML = `<p>${event.title} - ${new Date(event.date).toLocaleDateString()}</p>`;
+                eventsList.appendChild(eventDiv);
+            });
+        }
+        document.addEventListener('DOMContentLoaded', loadEvents);
+    </script>
+<section class="news-updates">
+<div class="container">
+<h2>Dernières nouvelles</h2>
+<div class="news-item">
+<p>Notre récent événement de collecte de fonds a dépassé les attentes, amassant plus de 50 000 $ pour des projets locaux !</p>
+</div>
+<a th:href="@{/api/news/}">Lire plus d’actualités</a>
+</div>
+</section>
+<footer class="footer">
+<div class="container">
+<p style="text-align: center;">© 2024 Rotary Club de Sunrise. Tous droits réservés.</p>
+<ul class="social-links">
+<li><a th:href="@{/api/Facebook/}">Sur Facebook</a></li>
+<li><a th:href="@{/api/insta/}">Sur Instagram</a></li>
+<li><a href="#">Gazouiller</a></li>
+</ul>
+</div>
+</footer>
+<script>
+		
+		document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    menuToggle.addEventListener('click', function() {
+        menu.classList.toggle('active');
+    });
+});
+
+	</script>
+<script src="/scripts/language.js"></script></body>
+</html>

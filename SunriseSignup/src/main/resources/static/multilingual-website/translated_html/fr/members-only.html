@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Réservé aux membres</title>
+<style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        /* Media queries for mobile view at 768px */
+        @media only screen and (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+            h1, h2 {
+                font-size: 18px;
+            }
+            table {
+                font-size: 14px;
+            }
+            th, td {
+                padding: 4px;
+            }
+            form {
+                width: 90%;
+                margin: 20px auto;
+            }
+            input[type="text"], input[type="date"] {
+                width: 80%;
+            }
+            button[type="submit"] {
+                width: 80%;
+            }
+            #eventList {
+                font-size: 14px;
+            }
+            #eventList li {
+                margin-bottom: 10px;
+            }
+            table {
+                border-collapse: separate;
+                border-spacing: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+<h1>Bienvenue, membre !</h1>
+<p>Cette page n’est visible que par les membres connectés.</p>
+<h1>Mettre à jour les événements à venir</h1>
+<form id="eventForm" method="post" th:action="@{/add-event/}">
+<label for="eventTitle">Event Title:</label>
+<input id="eventTitle" name="eventTitle" required="" type="text"/><br/><br/>
+<label for="eventDate">Event Date:</label>
+<input id="eventDate" name="eventDate" required="" type="date"/><br/><br/>
+<button type="submit">Add Event</button>
+</form>
+<h2>Événements à venir</h2>
+<ul id="eventList"></ul>
+<script>
+        const eventForm = document.getElementById('eventForm');
+        const eventList = document.getElementById('eventList');
+
+        // Function to display events
+        function displayEvents() {
+            const events = JSON.parse(localStorage.getItem('events')) || [];
+            eventList.innerHTML = ''; // Clear the current list
+            events.forEach((event, index) => {
+                const li = document.createElement('li');
+                li.textContent = `${event.title} - ${event.date}`;
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Delete';
+                deleteButton.onclick = () => deleteEvent(index);
+                li.appendChild(deleteButton);
+                eventList.appendChild(li);
+            });
+        }
+
+        // Function to delete an event
+        function deleteEvent(index) {
+            const events = JSON.parse(localStorage.getItem('events')) || [];
+            events.splice(index, 1); // Remove the event at the specified index
+            localStorage.setItem('events', JSON.stringify(events));
+            displayEvents(); // Refresh the list
+        }
+
+        // Add event listener to the form
+        eventForm.addEventListener('submit', function(e) {
+           // e.preventDefault();
+            const title = document.getElementById('eventTitle').value;
+            const date = document.getElementById('eventDate').value;
+            const events = JSON.parse(localStorage.getItem('events')) || [];
+            events.push({ title, date });
+            localStorage.setItem('events', JSON.stringify(events));
+            alert('Event added successfully!');
+            //eventForm.reset();
+            displayEvents(); // Refresh the list
+        });
+
+        // Initial display of events
+        displayEvents();
+    </script>
+<h2>Liste de contacts</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Email</th>
+<th>Phone Number</th>
+<th>Address</th>
+<th>Subject</th>
+<th>Message</th>
+</tr>
+</thead>
+<tbody>
+<tr th:each="contact : ${contacts}">
+<td th:text="${contact.id}"></td>
+<td th:text="${contact.name}"></td>
+<td th:text="${contact.email}"></td>
+<td th:text="${contact.phone}"></td>
+<td th:text="${contact.address}"></td>
+<td th:text="${contact.subject}"></td>
+<td th:text="${contact.message}"></td>
+</tr>
+</tbody>
+</table>
+<a th:href="@{/api/login}">Déconnexion</a>
+<script src="/scripts/language.js"></script></body>
+</html>

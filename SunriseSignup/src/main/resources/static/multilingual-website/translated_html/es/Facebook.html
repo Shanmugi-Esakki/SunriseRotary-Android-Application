@@ -1,0 +1,273 @@
+<!--
+<div style="display: flex; flex-wrap: nowrap;">
+  <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61563338514872%26mibextid%3DZbWKwL&tabs=timeline&width=2000&height=1000&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=true&appId=1008332294004409" width="500" height="1000" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+  <div style="width: 1000px; background-color: #f0f0f0; padding: 20px;">
+   
+    <h2>Right-hand side content</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet nulla auctor, vestibulum magna sed, convallis ex.</p>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+  </div>
+</div>
+-->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Amanecer Facebook</title>
+<link href="styles.css" rel="stylesheet"/>
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(241, 249, 254);
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #3b5998; /* Facebook Blue */
+            padding: 10px 20px;
+            color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .navbar .logo img {
+            height: 50px;
+            border-radius: 50%;
+        }
+        .navbar .menu {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar .menu li {
+            margin-left: 20px;
+        }
+        .navbar .menu li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease-in-out;
+        }
+        .navbar .menu li a:hover {
+            color: #ddd;
+        }
+        /* Toggle Button for Mobile */
+        .toggle {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: #fff;
+        }
+        /* Responsive Layout */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .navbar .menu {
+                flex-direction: column;
+                width: 100%;
+                display: none; /* Hide menu by default */
+            }
+
+            .navbar .menu li {
+                margin-left: 0;
+                text-align: center;
+                padding: 10px 0;
+                border-top: 1px solid #fff;
+                border-bottom: 1px solid #fff;
+            }
+
+            .toggle {
+                display: block;
+            }
+
+            .navbar.active .menu {
+                display: flex;
+                height: 50px;
+            }
+        }
+        
+        .container {
+            display: flex;
+            flex-wrap: nowrap;
+            height: calc(100vh - 70px); /* Adjust height to account for navbar */
+        }
+        .facebook-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            overflow: hidden;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .right-hand-side {
+            width: 190%;
+            background-color: rgb(241, 249, 254);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-y: scroll;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 20px;
+            width: 90%;
+            animation: slideIn 1.5s ease-in-out;
+        }
+        .section-header {
+            font-size: 34px;
+            font-weight: bold;
+            color: #3b5998; /* Facebook Blue */
+            margin-bottom: 10px;
+        }
+        .section-content {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .section img {
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 20px 0;
+            width: 100%;
+            height: 450px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .section img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        /* Testimonial Styling */
+        .testimonial {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #f0f2f5;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .testimonial img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .testimonial .name {
+            font-weight: bold;
+            color: #3b5998; /* Facebook Blue */
+            margin-bottom: 10px;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+<nav class="navbar">
+<div class="logo">
+<a href="/"><img alt="Rotary Logo" src="/imgs1/icontop.png"/></a>
+</div>
+<span class="toggle" onclick="toggleMenu()">☰</span>
+<ul class="menu">
+<li><a href="/">Hogar</a></li>
+<li><a th:href="@{/api/about/}">Sobre nosotros</a></li>
+<li><a th:href="@{/api/news/}">Noticias-Medios</a></li>
+<li><a th:href="@{/api/serviceprojects/}">Proyectos de servicio</a></li>
+<li><a th:href="@{/api/contact/}">Contáctenos</a></li>
+<div id="google_translate_element"></div>
+</ul>
+</nav>
+</header>
+<div class="container">
+<iframe allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen="true" class="facebook-iframe" frameborder="0" height="1000" scrolling="no" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61563338514872%26mibextid%3DZbWKwL&amp;tabs=timeline&amp;width=2000&amp;height=1000&amp;small_header=true&amp;adapt_container_width=false&amp;hide_cover=false&amp;show_facepile=true&amp;appId=1008332294004409" style="border:none;overflow:hidden" width="2000"></iframe>
+<div class="right-hand-side">
+<div class="section" style="text-align: center;">
+<h2 class="section-header">¿Por qué elegirnos?</h2>
+<p class="section-content">Global Impact<br/>Join a network that makes a meaningful difference worldwide through humanitarian projects and partnerships.</p>
+<img alt="Global Impact" height="300px" src="/imgs1/glfb.jpg" width="100%"/>
+</div>
+<div class="section">
+<h2 class="section-header">Oportunidades de networking</h2>
+<p class="section-content">Conéctese con diversos profesionales y líderes comunitarios, fomentando relaciones y colaboraciones valiosas.</p>
+<img alt="Networking Opportunities" height="200px" src="/imgs1/netfb.jpeg" width="100%"/>
+</div>
+<div class="section">
+<h2 class="section-header">Crecimiento personal</h2>
+<p class="section-content">Acceda a programas de desarrollo de liderazgo y oportunidades de crecimiento personal y profesional.</p>
+<img alt="Personal Growth" height="200px" src="/imgs1/perfb.jpeg" width="100%"/>
+</div>
+<div class="section">
+<h2 class="section-header">Participación de la comunidad</h2>
+<p class="section-content">Participar en proyectos de servicio comunitario local que aborden necesidades apremiantes y mejoren la calidad de vida.</p>
+<img alt="Community Engagement" height="200px" src="/imgs1/commufb.jpeg" width="100%"/>
+</div>
+<div class="section">
+<h2 class="section-header">Testimonios de clientes</h2>
+<div class="testimonial">
+<img alt="John Doe" height="50px" src="/imgs1/prof1.avif" width="50px"/>
+<div class="name">John Doe</div>
+<p>"Afiliarme a Rotary ha sido un punto de inflexión para mí. Las oportunidades de servir a mi comunidad junto a personas dedicadas han sido increíblemente gratificantes. He crecido tanto personal como profesionalmente a través de su programa de liderazgo".</p>
+</div>
+<div class="testimonial">
+<img alt="Jane Smith" height="50px" src="/imgs1/prof2.avif" width="50px"/>
+<div class="name">Jane Smith</div>
+<p>"Ser parte de Rotary me ha permitido marcar una diferencia real a nivel mundial. Desde el apoyo a iniciativas de salud hasta la participación en proyectos internacionales, he visto de primera mano el impacto que podemos tener juntos".</p>
+</div>
+<div class="testimonial">
+<img alt="David Brown" height="50px" src="/imgs1/prof3.avif" width="50px"/>
+<div class="name">David Brown</div>
+<p>"Rotary no es solo una organización; Es una familia de personas de ideas afines comprometidas con el servicio por encima de sí mismo. Las amistades que he hecho y los proyectos que hemos emprendido han dejado una impresión duradera en mí".</p>
+</div>
+</div>
+</div>
+</div>
+<script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+<script>
+		function loadGoogleTranslate(){
+			new google.translate.TranslateElement(
+				"google_element"
+			);
+		}
+		
+		
+        function toggleMenu() {
+            document.querySelector('.navbar').classList.toggle('active');
+        }
+    
+	</script>
+<script src="/scripts/language.js"></script></body>
+</html>

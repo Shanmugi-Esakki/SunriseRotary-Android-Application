@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Sunrise Rotary</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <style>
+      
+/* Common Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: #004579;
+    padding-top: 20px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    color: #004579;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 20px;
+}
+
+.navbar .logo img {
+    width: 350px;
+}
+
+.navbar .menu {
+   
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+/* Menu Items */
+.navbar .menu li {
+    margin: 0 15px;
+}
+
+.navbar .menu li a {
+    color: #004579;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar .menu li a:hover {
+    color: #f0a500;
+}
+
+/* Hamburger Menu Icon for Mobile */
+.menu {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+ .menu.active {
+        display: flex; /* Show the menu when the toggle icon is clicked */
+    }
+
+.menu-icon{
+	 display: none;
+            flex-direction: column;
+            cursor: pointer;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+}
+.menu-icon .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #004579;
+            margin: 4px 0;
+            transition: 0.4s;
+        }
+.navbar .menu-icon:hover {
+    color: #f0a500;
+}
+.navbar .menu {
+   display: flex;
+   list-style: none;
+   justify-content: space-between;
+    
+}
+ /* Toggle Button */
+        .navbar .menu-toggle {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: #004579;
+        }
+ /* Media Queries for Other Views */
+        @media (max-width: 992px) {
+            .navbar .logo img {
+                width: 300px;
+            }
+
+            .container {
+                width: 90%;
+            }
+
+            .donation-options {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .navbar .logo img {
+                width: 200px;
+            }
+
+            .header {
+                padding: 20px 0;
+            }
+
+            .container {
+                width: 100%;
+            }
+
+            .donation-options {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .section input[type="submit"] {
+                padding: 15px;
+            }
+        }
+         /* Media Queries for Mobile */
+        @media (max-width: 768px) {
+            .navbar .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar .logo img {
+                width: 360px;
+            }
+
+            .navbar .menu {
+                display: none;
+                flex-direction: column;
+                margin-right: 0;
+            }
+         
+
+            .navbar .menu li {
+                margin: 10px 0;
+            }
+
+            .navbar .menu-toggle {
+                display: block;
+            }
+
+            .navbar .menu.active {
+                display: flex;
+                width: 100%;
+                align-items: center;
+            }
+        }
+
+
+        header {
+            background: url('/imgs1/contactimg.jpg') no-repeat center center;
+            background-size: cover;
+            text-align: center;
+            padding: 100px 20px 50px;
+            color: white;
+            margin-top: 60px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin: 10px 0 0;
+        }
+
+        .contact-section {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-info, .contact-form {
+            background: #e6efff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .contact-info h2, .contact-form h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #004579;
+        }
+
+        .contact-info p {
+            font-size: 1em;
+            margin: 10px 0;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form input, .contact-form textarea {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #004579;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .contact-form button {
+            padding: 10px;
+            border: none;
+            background: #004579;
+            color: white;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .footer {
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            background-color: #004579;
+        }
+
+        .footer .social-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer .social-links li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .footer .social-links li a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+    <div class="container">
+        <div class="logo">
+            <a href="/"><img src="/imgs1/Sunrise Rotary.png" alt="Sunrise Rotary Club Logo"></a>
+        </div>
+        <span class="menu-toggle">☰</span>
+        <ul class="menu" id="menu">
+            <li><a href="/">Home</a></li>
+            <li><a th:href="@{/api/about/}">About Us</a></li>
+            <li><a th:href="@{/api/news/}">News-Media</a></li>
+            <li><a th:href="@{/api/serviceprojects/}">Service Projects</a></li>
+            <li><a th:href="@{/api/contact/}">Contact Us</a></li>
+            <li><a th:href="@{/api/login}">Login</a></li>
+             <div id="google_translate_element"></div>
+        </ul>
+       
+
+    </div>
+</nav>
+
+
+    <header>
+        <h1>Get in Touch with Sunrise Rotary</h1>
+        <p>We'd love to hear from you!</p>
+    </header>
+
+    <section class="contact-section">
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p><strong>Address:</strong> 123 Rotary Lane, City, State, ZIP</p>
+            <p><strong>Phone:</strong> (123) 456-7890</p>
+            <p><strong>Email:</strong> info@sunriserotary.org</p>
+            <p><strong>Follow Us:</strong> 
+                <a th:href="@{/api/Facebook/}">Facebook</a> | 
+                <a href="/twitter">Twitter</a> | 
+                <a th:href="@{/api/insta/}">Instagram</a>
+            </p>
+        </div>
+
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="/submitform" method="post" onsubmit="return validateForm()">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="text" name="phone" placeholder="Phone Number" required>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="message" placeholder="Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Sunrise Rotary Club. All rights reserved.</p>
+            <ul class="social-links">
+                <li><a th:href="@{/api/Facebook/}">Facebook</a></li>
+                <li><a href="/twitter">Twitter</a></li>
+                <li><a th:href="@{/api/insta/}">Instagram</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+		
+		 document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.menu').classList.toggle('active');
+        });
+        
+      
+
+        function validateForm() {
+            const email = document.querySelector('input[name="email"]').value;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+
+            const phone = document.querySelector('input[name="phone"]').value;
+            const phonePattern = /^[0-9]{10}$/;
+            if (!phonePattern.test(phone)) {
+                alert('Please enter a valid phone number.');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>

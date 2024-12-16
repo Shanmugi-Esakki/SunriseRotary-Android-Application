@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Member Login</title>
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
+</head>
+<body>
+<style>
+		body{
+			font-family: Arial, sans-serif;
+		}
+		
+ .navbar {
+            background-color: white;
+            color: #fff;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+   
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.logo {
+ width: 80%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #004579;
+    
+    transition: color 0.3s;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+     color: #f0a500;
+}
+
+nav ul li a[style*="color: #004579;"] {
+    color: #004579; /* Keep the active link color */
+}
+
+.login-form {
+            margin-top: 100px; /* Changed padding-top to margin-top */
+            max-width: 400px;
+            margin: 100px auto;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .login-form h2 {
+            text-align: center;
+            color: #004579;
+            margin-bottom: 20px;
+            animation: slideInFromTop 1s ease-in-out;
+        }
+
+        @keyframes slideInFromTop {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 12px 15px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+            animation: slideInFromLeft 1s ease-in-out;
+        }
+
+        @keyframes slideInFromLeft {
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .login-form button {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: #004579;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            animation: slideInFromRight 1s ease-in-out;
+        }
+
+        @keyframes slideInFromRight {
+            from { transform: translateX(50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .login-form button:hover {
+            background-color: #003366;
+        }
+
+        .login-form p {
+            text-align: center;
+            color: #ff0000;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .login-form .forgot-password {
+            text-align: right;
+            display: block;
+            margin-top: 10px;
+            color: #004579;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .login-form .forgot-password:hover {
+            color: bisque;
+        }
+
+        .login-form .sign-up {
+            text-align: center;
+            margin-top: 20px;
+            color: #004579;
+            font-size: 14px;
+        }
+
+        .login-form .sign-up a {
+            color: #004579;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .login-form .sign-up a:hover {
+            color: bisque;
+        }
+ /* Toggle Button */
+        .navbar .menu-toggle {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: #004579;
+        }
+
+        /* Media Queries for Mobile */
+        @media (max-width: 768px) {
+            .navbar .container {
+                flex-direction: column;
+                align-items: flex-start;
+                height: auto;
+            }
+
+            .navbar .logo img {
+                width: 360px;
+            }
+
+            .navbar .menu {
+                display: none;
+                flex-direction: column;
+                margin-right: 0;
+            }
+         
+
+            .navbar .menu li {
+                margin: 10px 0;
+            }
+
+            .navbar .menu-toggle {
+                display: block;
+            }
+
+            .navbar .menu.active {
+                display: flex;
+                width: 100%;
+                align-items: center;
+            }
+        }
+
+@media (max-width: 480px) {
+    .header {
+        padding: 5px 0;
+    }
+
+    .logo {
+        width: 60%;
+    }
+
+    .login-form {
+        padding: 20px;
+    }
+
+    .login-form input,
+    .login-form button {
+        padding: 10px 12px;
+    }
+
+    .login-form h2 {
+        font-size: 20px;
+    }
+
+    .login-form .forgot-password,
+    .login-form .sign-up {
+        font-size: 12px;
+    }
+}
+	</style>
+<nav class="navbar">
+<div class="container">
+<div class="logo">
+<a href="/"><img alt="Sunrise Rotary Club Logo" src="/imgs1/Sunrise Rotary.png"/></a>
+</div>
+<span class="menu-toggle">☰</span>
+<ul class="menu">
+<li><a href="/">Home</a></li>
+<li><a href="/api/about/">About Us</a></li>
+<li><a href="/api/news/">News-Media</a></li>
+<li><a href="/api/serviceprojects/">Service Projects</a></li>
+<li><a href="/api/contact/">Contact Us</a></li>
+<li><a href="/api/login">Login</a></li>
+<div id="google_translate_element"></div>
+</ul>
+</div>
+</nav>
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="login-form">
+<h2>Member Login</h2>
+<p style="text-align: center; color: #003366;">Login if you are a Rotary member</p>
+<form method="post" th:action="@{/api/members-only/}">
+<input name="username" placeholder="Username" required="" type="text"/>
+<input name="password" placeholder="Password" required="" type="password"/>
+<button type="submit">Login</button>
+<p th:text="${msg}"></p>
+</form><br/><br/><br/>
+<div class="sign-up">
+            Want to be a member? <a th:href="@{/api/contact/}">Contact us</a>
+</div>
+</div>
+<script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+<script>
+		function loadGoogleTranslate(){
+			new google.translate.TranslateElement(
+				"google_element"
+			);
+		}
+		 document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.menu').classList.toggle('active');
+        });
+	</script>
+<script src="/scripts/language.js"></script></body>
+</html>

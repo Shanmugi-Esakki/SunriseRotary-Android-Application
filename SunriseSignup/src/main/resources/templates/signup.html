@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="container">
+        <div class="signup-form">
+            <h2>Sign Up</h2>
+            <form id="signup-form" method="post" action="/api/users/">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+
+                <div id="password-error" style="color: red;"></div>
+
+                <input type="submit" value="Sign Up">
+            </form>
+            <a href="https://sunriserotary.odoo.com/web/login">Already have an account? Sign in</a>
+        </div>
+    </div>
+
+    <script>
+        const form = document.querySelector('#signup-form');
+        const passwordInput = document.querySelector('#password');
+        const confirmPasswordInput = document.querySelector('#confirm-password');
+        const passwordErrorDiv = document.querySelector('#password-error');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (passwordInput.value !== confirmPasswordInput.value) {
+                passwordErrorDiv.innerText = 'Passwords do not match';
+            } else {
+                const user = {
+                    username: document.querySelector('#username').value,
+                    email: document.querySelector('#email').value,
+                    password: passwordInput.value
+                };
+
+                fetch('/api/users/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(user)
+                })
+                .then(response => response.text())
+                .then(message => console.log(message));
+            }
+        });
+    </script>
+</body>
+</html>

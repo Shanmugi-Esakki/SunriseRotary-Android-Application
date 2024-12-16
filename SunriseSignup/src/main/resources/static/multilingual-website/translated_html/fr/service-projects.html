@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nos projets de service - Sunrise Rotary</title>
+<link href="styles.css" rel="stylesheet"/>
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
+</head>
+<body>
+<style>
+		  * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            background-color: white;
+            color: #fff;
+            padding: 10px 0;
+            position: fixed; /* Add this line */
+            width: 100%; /* Add this line */
+            top: 0; /* Add this line */
+            z-index: 1000; /* Add this line to ensure it stays above other elements */
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar .logo img {
+            width: 80%;
+            
+        }
+
+        .navbar .menu {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            margin-right: 10%;
+        }
+
+        .navbar .menu li {
+            margin: 0 15px;
+        }
+
+        .navbar .menu li a {
+            color: #004579;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .navbar .menu li a:hover {
+            color: #f0a500;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: white; /* Light background color for contrast */
+            padding-top: 160px; /* Add this line to offset the fixed navbar height */
+        }
+
+        header {
+            background: url('/imgs1/serviceimg.avif') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+            animation: fadeIn 2s ease-in-out;
+            background-color: #004579; /* Dark blue background */
+        }
+
+        header h1 {
+            font-size: 3em;
+        }
+
+        header p {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        section {
+            padding: 60px 20px;
+        }
+
+        .introduction {
+            text-align: center;
+            animation: fadeInUp 2s ease-in-out;
+            background-color: white; /* Soft bisque background */
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+
+        .introduction p {
+            margin-bottom: 20px;
+            color: #333; /* Dark text color */
+        }
+
+        .introduction blockquote {
+            font-style: italic;
+            color: #555;
+        }
+
+        .featured-projects, .project-categories, .project-highlights, .volunteer-stories, .get-involved, .upcoming-events, .photo-gallery {
+            margin-bottom: 40px;
+            background-color: #FDF1EB;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            animation: fadeInUp 2s ease-in-out;
+            color: #004579; /* Dark blue text */
+        }
+
+        .carousel {
+            display: flex;
+            overflow: auto;
+        }
+
+        .carousel-item {
+            min-width: 300px;
+            margin: 10px;
+            background: #fff; /* White background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .category {
+            text-align: center;
+            margin: 20px;
+            animation: fadeIn 2s ease-in-out;
+            background-color: white; /* Soft bisque background */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .category img {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+
+        .project-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .project-card {
+            background: #fff; /* White background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 300px;
+            margin: 10px;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .project-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .project-card a {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #004579; /* Dark blue text */
+            font-weight: bold;
+        }
+
+        .get-involved {
+			background: url("/imgs1/servicebg.jpeg");
+            padding: 40px 20px;
+            border-radius: 10px;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+            margin-bottom: 40px;
+        }
+
+        .get-involved h2 {
+            color: #004579; /* Dark blue text */
+            margin-bottom: 20px;
+        }
+
+        .get-involved p {
+            color: #333; /* Dark text color */
+            margin-bottom: 30px;
+            font-size: 1.2em;
+        }
+
+        .cta-buttons {
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 30px;
+            background: #004579; /* Dark blue background */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            transition: background 0.3s;
+            font-size: 1.1em;
+        }
+
+        .cta-button:hover {
+            background: #003456; /* Slightly darker blue for hover */
+        }
+
+        .volunteer-info, .donate-info {
+            text-align: left;
+            margin: 20px auto;
+            max-width: 800px;
+            background: #fff; /* White background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .volunteer-info h3, .donate-info h3 {
+            color: #004579; /* Dark blue text */
+            margin-bottom: 10px;
+        }
+
+        .volunteer-info ul, .donate-info ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            color: #333; /* Dark text color */
+        }
+
+        .volunteer-info li, .donate-info li {
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .donate-info p {
+            margin-bottom: 10px;
+            color: #333; /* Dark text color */
+        }
+
+        .stories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .story {
+            text-align: center;
+            margin: 20px;
+            width: 300px;
+            animation: fadeIn 2s ease-in-out;
+            background-color: white; /* Soft bisque background */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .story img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background: #004579; /* Dark blue background */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #003456; /* Slightly darker blue for hover */
+        }
+
+        .events {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .event {
+            text-align: center;
+            margin: 20px;
+            width: 300px;
+            animation: fadeIn 2s ease-in-out;
+            background-color: white; /* Soft bisque background */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .event button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #28a745; /* Green background */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .event button:hover {
+            background: #218838; /* Slightly darker green for hover */
+        }
+
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .photo {
+            margin: 10px;
+            width: calc(33.333% - 20px);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .photo img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #004579; /* Dark blue background */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Media Queries */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+    .navbar .logo img {
+        width: 250px;
+        margin-left: 10%;
+    }
+
+    .navbar .menu {
+        margin-right: 5%;
+    }
+
+    .carousel-item,
+    .project-card,
+    .story,
+    .event {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .photo {
+        width: 100%;
+    }
+
+    .category,
+    .cta-button {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .get-involved {
+        padding: 20px 10px;
+    }
+
+    .volunteer-info,
+    .donate-info {
+        width: 100%;
+        padding: 10px;
+    }
+}
+        /* Toggle Button */
+        .navbar .menu-toggle {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: #004579;
+            align-items: flex-end;
+        }
+
+        /* Media Queries for Mobile */
+        @media (max-width: 768px) {
+            .navbar .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar .logo img {
+                width: 360px !important;
+                
+            }
+
+            .navbar .menu {
+                display: none;
+                flex-direction: column;
+                margin-right: 0;
+            }
+         
+
+            .navbar .menu li {
+                margin: 10px 0;
+            }
+
+            .navbar .menu-toggle {
+                display: block;
+                 padding-left:10px;
+                
+            }
+
+            .navbar .menu.active {
+                display: flex;
+                width: 100%;
+                align-items: center;
+               
+            }
+        }
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+    .navbar .logo img {
+        width: 350px;
+        margin-left: 18%;
+    }
+
+    .navbar .menu {
+        margin-right: 8%;
+    }
+
+    .carousel-item,
+    .project-card,
+    .story,
+    .event {
+        width: 30%;
+    }
+
+    .photo {
+        width: 30%;
+    }
+
+    .category,
+    .cta-button {
+        width: 30%;
+    }
+
+    .get-involved {
+        padding: 35px 20px;
+    }
+
+    .volunteer-info,
+    .donate-info {
+        width: 80%;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+    .navbar .logo img {
+        width: 380px;
+        margin-left: 19%;
+    }
+
+    .navbar .menu {
+        margin-right: 9%;
+    }
+
+    .carousel-item,
+    .project-card,
+    .story,
+    .event {
+        width: 25%;
+    }
+
+    .photo {
+        width: 25%;
+    }
+
+    .category,
+    .cta-button {
+        width: 25%;
+    }
+
+    .get-involved {
+        padding: 40px 20px;
+    }
+
+    .volunteer-info,
+    .donate-info {
+        width: 70%;
+    }
+}
+
+	</style>
+<nav class="navbar">
+<div class="container">
+<div class="logo">
+<a href="/"><img alt="Sunrise Rotary Club Logo" src="/imgs1/Sunrise Rotary.png"/></a>
+</div>
+<span class="menu-toggle">☰</span>
+<ul class="menu">
+<li><a href="/">Domicile</a></li>
+<li><a href="/api/about/">Qui sommes-nous</a></li>
+<li><a href="/api/news/">Actualités-Médias</a></li>
+<li><a href="/api/serviceprojects/">Projets de service</a></li>
+<li><a href="/api/contact/">Contactez-nous</a></li>
+<li><a href="/api/login">Connectez-vous</a></li>
+<div id="google_translate_element"></div>
+</ul>
+</div>
+</nav>
+<header class="header">
+<h1 style="color: #003456;">Nos projets de service</h1>
+<p style="color: #003456;">Faire une différence dans notre communauté et au-delà</p>
+</header>
+<section class="introduction">
+<p>Au Sunrise Rotary, nous nous engageons à servir notre communauté à travers diverses actions à fort impact. Joignez-vous à nous pour faire une différence !</p>
+<blockquote>"Service above self."</blockquote>
+</section>
+<h2>Projets en vedette</h2>
+<section class="featured-projects">
+<div class="carousel">
+<div class="carousel-item">
+<img alt="Project 1" src="/imgs1/waterservice.webp"/>
+<h3>Initiative pour l’assainissement de l’eau</h3>
+<p>Fournir de l’eau potable aux zones rurales.</p>
+</div>
+<div class="carousel-item">
+<img alt="Project 2" src="/imgs1/eduservice.avif"/>
+<h3>L’éducation pour tous</h3>
+<p>Soutenir les programmes d’alphabétisation et les écoles.</p>
+</div>
+<div class="carousel-item">
+<img alt="Project 3" src="/imgs1/plantservice.jpg"/>
+<h3>Campagne de plantation d’arbres</h3>
+<p>La préservation de l’environnement par la plantation d’arbres.</p>
+</div>
+<div class="carousel-item">
+<img alt="Project 1" src="/imgs1/waterservice.webp"/>
+<h3>Initiative pour l’assainissement de l’eau</h3>
+<p>Fournir de l’eau potable aux zones rurales.</p>
+</div>
+<div class="carousel-item">
+<img alt="Project 2" src="/imgs1/eduservice.avif"/>
+<h3>L’éducation pour tous</h3>
+<p>Soutenir les programmes d’alphabétisation et les écoles.</p>
+</div>
+<div class="carousel-item">
+<img alt="Project 3" src="/imgs1/plantservice.jpg"/>
+<h3>Campagne de plantation d’arbres</h3>
+<p>La préservation de l’environnement par la plantation d’arbres.</p>
+</div>
+<div class="carousel-item">
+<img alt="Project 1" src="/imgs1/waterservice.webp"/>
+<h3>Initiative pour l’assainissement de l’eau</h3>
+<p>Fournir de l’eau potable aux zones rurales.</p>
+</div>
+<div class="carousel-item">
+<img alt="Project 2" src="/imgs1/eduservice.avif"/>
+<h3>L’éducation pour tous</h3>
+<p>Soutenir les programmes d’alphabétisation et les écoles.</p>
+</div>
+<div class="carousel-item">
+<img alt="Project 3" src="/imgs1/plantservice.jpg"/>
+<h3>Campagne de plantation d’arbres</h3>
+<p>La préservation de l’environnement par la plantation d’arbres.</p>
+</div>
+</div>
+</section>
+<h2>Explorez nos projets par catégorie</h2>
+<section class="project-categories">
+<div class="categories">
+<div class="category">
+<img alt="Education" src="/imgs1/edu.avif"/>
+<h3>Éducation</h3>
+<p>Projets liés aux écoles, bourses d’études, programmes d’alphabétisation.</p>
+</div>
+<div class="category">
+<img alt="Health" src="/imgs1/health.webp"/>
+<h3>Santé</h3>
+<p>Camps médicaux, campagnes de sensibilisation à la santé.</p>
+</div>
+<div class="category">
+<img alt="Environment" src="/imgs1/envi.jpeg"/>
+<h3>Environnement</h3>
+<p>Campagnes de nettoyage, plantation d’arbres.</p>
+</div>
+<div class="category">
+<img alt="Community Development" src="/imgs1/commu.jpg"/>
+<h3>Développement communautaire</h3>
+<p>Construire des infrastructures, soutenir les entreprises locales.</p>
+</div>
+<div class="categories">
+<div class="category">
+<img alt="Education" src="/imgs1/edu.avif"/>
+<h3>Éducation</h3>
+<p>Projets liés aux écoles, bourses d’études, programmes d’alphabétisation.</p>
+</div>
+<div class="category">
+<img alt="Health" src="/imgs1/health.webp"/>
+<h3>Santé</h3>
+<p>Camps médicaux, campagnes de sensibilisation à la santé.</p>
+</div>
+<div class="category">
+<img alt="Environment" src="/imgs1/envi.jpeg"/>
+<h3>Environnement</h3>
+<p>Campagnes de nettoyage, plantation d’arbres.</p>
+</div>
+<div class="category">
+<img alt="Community Development" src="/imgs1/commu.jpg"/>
+<h3>Développement communautaire</h3>
+<p>Construire des infrastructures, soutenir les entreprises locales.</p>
+</div>
+</div>
+</div></section>
+<h2>Pleins feux sur nos projets</h2>
+<section class="project-highlights">
+<div class="project-cards">
+<div class="project-card">
+<img alt="Highlight 1" src="/imgs1/proj1.jpeg"/>
+<h3>Titre du projet 1</h3>
+<p>Brève description</p>
+<a href="#">Pour en savoir plus</a>
+</div>
+<div class="project-card">
+<img alt="Highlight 2" src="/imgs1/proj2.jpeg"/>
+<h3>Titre du projet 2</h3>
+<p>Brève description</p>
+<a href="#">Pour en savoir plus</a>
+</div>
+<div class="project-card">
+<img alt="Highlight 3" src="/imgs1/proj3.jpeg"/>
+<h3>Titre du projet 3</h3>
+<p>Brève description</p>
+<a href="#">Pour en savoir plus</a>
+</div>
+</div>
+</section>
+<h2>Voix du terrain</h2>
+<section class="volunteer-stories">
+<div class="stories">
+<div class="story">
+<img alt="Volunteer 1" src="/imgs1/prof1.avif"/>
+<p>« Faire du bénévolat avec Sunrise Rotary a été une expérience enrichissante. »</p>
+<p>- Nom du bénévole</p>
+</div>
+<div class="story">
+<img alt="Volunteer 2" src="/imgs1/prof2.avif"/>
+<p>« Faire une différence dans la communauté est vraiment gratifiant. »</p>
+<p>- Nom du bénévole</p>
+</div>
+<div class="story">
+<img alt="Volunteer 1" src="/imgs1/prof3.avif"/>
+<p>« Faire du bénévolat avec Sunrise Rotary a été une expérience enrichissante. »</p>
+<p>- Nom du bénévole</p>
+</div>
+<div class="story">
+<img alt="Volunteer 2" src="/imgs1/prof1.avif"/>
+<p>« Faire une différence dans la communauté est vraiment gratifiant. »</p>
+<p>- Nom du bénévole</p>
+</div>
+<div class="story">
+<img alt="Volunteer 1" src="/imgs1/prof2.avif"/>
+<p>« Faire du bénévolat avec Sunrise Rotary a été une expérience enrichissante. »</p>
+<p>- Nom du bénévole</p>
+</div>
+<div class="story">
+<img alt="Volunteer 2" src="/imgs1/prof3.avif"/>
+<p>« Faire une différence dans la communauté est vraiment gratifiant. »</p>
+<p>- Nom du bénévole</p>
+</div>
+<div class="story">
+<img alt="Volunteer 1" src="/imgs1/prof1.avif"/>
+<p>« Faire du bénévolat avec Sunrise Rotary a été une expérience enrichissante. »</p>
+<p>- Nom du bénévole</p>
+</div>
+<div class="story">
+<img alt="Volunteer 2" src="/imgs1/prof2.avif"/>
+<p>« Faire une différence dans la communauté est vraiment gratifiant. »</p>
+<p>- Nom du bénévole</p>
+</div>
+</div>
+</section>
+<h2>Joignez-vous à nous pour faire une différence</h2>
+<section class="get-involved">
+<p style="color: white;">Chez Sunrise Rotary, nous pensons que tout le monde a le pouvoir d’avoir un impact positif. Que vous souhaitiez donner de votre temps, de vos compétences ou de vos ressources, il existe de nombreuses façons de vous impliquer et de soutenir notre mission.</p>
+<div class="cta-buttons">
+<button class="cta-button" onclick="window.location.href='/api/contact/'">Become a Volunteer</button>
+<button class="cta-button" onclick="window.location.href='/api/donate/'">Support Our Projects</button>
+</div>
+<div class="volunteer-info">
+<h3>Pourquoi faire du bénévolat avec nous ?</h3>
+<ul>
+<li>Make a tangible difference in your community.</li>
+<li>Meet like-minded individuals and build lasting friendships.</li>
+<li>Gain valuable skills and experience.</li>
+<li>Be part of a global network of Rotarians dedicated to service.</li>
+</ul>
+</div>
+<div class="donate-info">
+<h3>Comment votre soutien vous aide</h3>
+<p>Vos dons nous permettent de :</p>
+<ul>
+<li>Fund critical community projects.</li>
+<li>Provide essential resources and support to those in need.</li>
+<li>Expand our outreach and impact.</li>
+<li>Sustain our efforts to create a better world.</li>
+</ul>
+</div>
+</section>
+<h2>Événements à venir</h2>
+<section class="upcoming-events">
+<div class="events">
+<div class="event">
+<h3>Titre de l’événement 1</h3>
+<p>Date</p>
+<p>Brève description</p>
+</div>
+<div class="event">
+<h3>Titre de l’événement 2</h3>
+<p>Date</p>
+<p>Brève description</p>
+</div>
+<div class="event">
+<h3>Titre de l’événement 3</h3>
+<p>Date</p>
+<p>Brève description</p>
+</div>
+<div class="event">
+<h3>Titre de l’événement 4</h3>
+<p>Date</p>
+<p>Brève description</p>
+</div>
+</div>
+</section>
+<h2>Galerie de projets</h2>
+<section class="photo-gallery">
+<div class="gallery">
+<img alt="Gallery 1" src="/imgs1/photo1.jpeg"/>
+<img alt="Gallery 2" src="/imgs1/photo2.jpeg"/>
+<img alt="Gallery 3" src="/imgs1/photo3.jpeg"/>
+<img alt="Gallery 1" src="/imgs1/photo1.jpeg"/>
+<img alt="Gallery 2" src="/imgs1/photo2.jpeg"/>
+</div>
+</section>
+<footer class="footer">
+<div>
+<a style="color: white" th:href="@{/api/Facebook/}">Sur Facebook</a>
+<a href="#" style="color: white">Gazouiller</a>
+<a style="color: white" th:href="@{/api/insta/}">Sur Instagram</a>
+</div>
+<div class="contact-info">
+<p>Courriel : info@sunriserotary.com</p>
+<p>Téléphone : 123-456-7890</p>
+<p>Adresse : 123 Rotary Lane, Community City</p>
+</div>
+</footer>
+<script src="http://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+<script>
+		function loadGoogleTranslate(){
+			new google.translate.TranslateElement(
+				"google_element"
+			);
+		}
+		
+		  document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.menu').classList.toggle('active');
+        });
+	</script>
+<script src="/scripts/language.js"></script></body>
+</html>

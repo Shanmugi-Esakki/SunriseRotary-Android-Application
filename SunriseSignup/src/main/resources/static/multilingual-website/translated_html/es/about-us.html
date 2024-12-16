@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sobre Nosotros - Sunrise Rotary Club</title>
+<link href="about.css" rel="stylesheet"/>
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
+</head>
+<body>
+<nav class="navbar">
+<div class="container">
+<div class="logo">
+<a href="/"><img alt="Sunrise Rotary Club Logo" src="/imgs1/Sunrise Rotary.png"/></a>
+</div>
+<span class="menu-toggle">☰</span>
+<ul class="menu">
+<li><a href="/">Hogar</a></li>
+<li><a th:href="@{/api/about/}">Sobre nosotros</a></li>
+<li><a th:href="@{/api/news/}">Noticias-Medios</a></li>
+<li><a th:href="@{/api/serviceprojects/}">Proyectos de servicio</a></li>
+<li><a th:href="@{/api/contact/}">Contáctenos</a></li>
+<li><a th:href="@{/api/login}">Iniciar sesión</a></li>
+<div id="google_translate_element"></div>
+</ul>
+</div>
+</nav>
+<script>
+    document.getElementById('mobile-menu').addEventListener('click', function() {
+        this.classList.toggle('active');
+        document.getElementById('menu').classList.toggle('active');
+    });
+</script>
+<header class="hero">
+<h1>Club Rotario de Sunrise</h1>
+<p>"Dar de comer por encima de sí mismo"</p>
+</header>
+<section class="about-us">
+<div class="container">
+<h2>¡Bienvenidos al Club Rotario de Sunrise!</h2>
+<p>En 2015, SunRiseRotary se enorgullece de ser socio de Rotary International, una red mundial de 1,2 millones de vecinos, amigos, líderes y solucionadores de problemas que se unen para lograr un cambio positivo y duradero en las comunidades locales y mundiales. Nuestro club se dedica a fomentar la buena voluntad, la paz y el entendimiento entre todas las personas. Creemos en el poder de la comunidad y en la importancia del servicio por encima de uno mismo.</p>
+<section class="video-section">
+<div class="container">
+<h2>Observa nuestro impacto</h2>
+<div class="video-container">
+<video controls="" height="315" width="560">
+<source src="/videos/dlib.mp4" type="video/mp4"/>
+                Your browser does not support the video tag.
+            </video>
+</div>
+<p>Vea cómo estamos marcando la diferencia en nuestra comunidad a través de nuestros diversos proyectos e iniciativas.</p>
+</div>
+</section>
+<h2>Nuestra historia</h2>
+<p>El Club Rotario de Sunrise fue fundado en [Año]. Nuestros fundadores, [Nombres de los fundadores], se propusieron crear una organización centrada en la comunidad dedicada al servicio y al compañerismo. A lo largo de los años, hemos logrado numerosos hitos:</p>
+<ul class="timeline">
+<li>Founded in [Year]</li>
+<li>First community project in [Year]</li>
+<li>[Milestone 3]</li>
+<li>[Milestone 4]</li>
+</ul>
+<h2>Nuestra Misión y Visión</h2>
+<p><strong>Mission:</strong> To promote peace, provide humanitarian services, and encourage ethical standards in all vocations.</p>
+<p><strong>Vision:</strong> A world where people unite and take action to create lasting change.</p>
+<h2>Nuestros Valores</h2>
+<ul class="values">
+<li>Integrity</li>
+<li>Service</li>
+<li>Fellowship</li>
+<li>Leadership</li>
+</ul>
+<h2>Nuestro Impacto</h2>
+<p>A lo largo de los años, hemos tenido un impacto significativo a través de nuestros proyectos e iniciativas:</p>
+<ul class="impact">
+<li>Number of projects completed: [Number]</li>
+<li>Lives touched: [Number]</li>
+<li>Funds raised: [Amount]</li>
+</ul>
+<div class="section join-us">
+<h2 style="color: white;">Únete a nosotros</h2>
+<p>Interested in becoming a member? <a th:href="@{/api/contact/}">Contáctenos</a> to learn more about membership benefits and the application process.</p>
+</div>
+<div class="section">
+<h2>Servicio a la comunidad</h2>
+<p>
+El servicio a la comunidad está en el corazón de lo que hacemos. Creemos que al abordar las necesidades de nuestra comunidad local, podemos crear un efecto dominó de cambio positivo. Nuestras iniciativas de servicio comunitario están diseñadas para abordar diversos problemas, desde la salud y la educación hasta la conservación del medio ambiente y el desarrollo económico.
+        </p>
+</div>
+<div class="section">
+<h2>Proyectos Locales</h2>
+<h3>Programas de Salud y Bienestar</h3>
+<p>
+Organizamos campamentos de salud, campañas de donación de sangre y talleres de bienestar para promover la salud y el bienestar. Por ejemplo, nuestra feria anual de salud ofrece chequeos médicos, exámenes dentales y exámenes oculares gratuitos a cientos de residentes que, de otro modo, no tendrían acceso a estos servicios esenciales.
+        </p>
+<h3>Apoyo Educativo</h3>
+<p>
+Nos asociamos con escuelas locales para proporcionar recursos, tutoría y programas de tutoría. Nuestra campaña "Libros para todos" ha distribuido más de 10,000 libros a escuelas con fondos insuficientes, asegurando que todos los niños tengan acceso a material de lectura de calidad.
+        </p>
+<h3>Conservación del Medio Ambiente</h3>
+<p>
+Llevamos a cabo campañas de plantación de árboles, eventos de limpieza comunitaria y programas de reciclaje. Nuestra iniciativa "Tierra Verde" ha plantado miles de árboles en áreas urbanas, creando espacios verdes que benefician tanto a las personas como a la vida silvestre.
+        </p>
+<h3>Seguridad Alimentaria</h3>
+<p>
+Apoyamos a los bancos de alimentos locales y organizamos campañas de recolección de alimentos para garantizar que nadie en nuestra comunidad pase hambre. Nuestro proyecto "Harvest Hope" colabora con agricultores locales para donar los excedentes de productos a familias necesitadas.
+        </p>
+<p>
+Cada uno de estos proyectos está diseñado para abordar las necesidades específicas de la comunidad al tiempo que promueve el voluntariado y la participación cívica. Al trabajar en estrecha colaboración con líderes locales, organizaciones y residentes, nos aseguramos de que nuestros esfuerzos sean impactantes y sostenibles.
+        </p>
+</div>
+<div class="section">
+<h2>Historias de impacto</h2>
+<h3>La familia Thompson</h3>
+<p>
+La familia Thompson luchaba por llegar a fin de mes. Con tres hijos que alimentar y facturas médicas crecientes, a menudo tenían que elegir entre comprar alimentos y pagar la atención médica. A través de nuestro programa de seguridad alimentaria, recibieron paquetes de alimentos regulares que ayudaron a aliviar su carga. Además, el campamento médico que organizamos brindó chequeos y medicamentos gratuitos para sus hijos, mejorando significativamente su calidad de vida.
+        </p>
+<h3>Espacios verdes en zonas urbanas</h3>
+<p>
+A Jane, una madre soltera que vive en la ciudad, a menudo le resultaba difícil encontrar espacios verdes y seguros para que sus hijos jugaran. Nuestra campaña de plantación de árboles transformó un lote urbano descuidado en un hermoso parque, proporcionando un entorno seguro y acogedor para familias como la de Jane. Este espacio verde se ha convertido en un centro comunitario, que fomenta las conexiones sociales y promueve las actividades al aire libre.
+        </p>
+<p>
+Estas historias resaltan el impacto tangible de nuestras iniciativas de servicio a la comunidad. Nos recuerdan que nuestros esfuerzos pueden cambiar vidas y nos inspiran a seguir trabajando por un futuro mejor para todos.
+        </p>
+</div>
+<h2>Conozca a nuestro equipo</h2>
+<div class="team">
+<div class="team-member">
+<img alt="Team Member" src="/imgs1/member1.jpg"/>
+<p><strong>John Doe</strong><br/>President</p>
+</div>
+<div class="team-member">
+<img alt="Team Member" src="/imgs1/member1.jpg"/>
+<p><strong>John Doe</strong><br/>President</p>
+</div>
+<div class="team-member">
+<img alt="Team Member" src="/imgs1/member2.jpg"/>
+<p><strong>Jane Smith</strong><br/>Vice President</p>
+</div>
+<div class="team-member">
+<img alt="Team Member" src="/imgs1/member2.jpg"/>
+<p><strong>Jane Smith</strong><br/>Vice President</p>
+</div>
+<!-- Add more team members as needed -->
+</div>
+<h2>Testimonios</h2>
+<div class="testimonials">
+<blockquote>"Being a part of the Sunrise Rotary Club has been an incredibly rewarding experience. The impact we've made on our community is truly inspiring." - Member</blockquote>
+<blockquote>"The support from the Sunrise Rotary Club has been life-changing. Their projects have brought hope and help to so many." - Community Member</blockquote>
+<blockquote>"Being a part of the Sunrise Rotary Club has been an incredibly rewarding experience. The impact we've made on our community is truly inspiring." - Member</blockquote>
+<blockquote>"The support from the Sunrise Rotary Club has been life-changing. Their projects have brought hope and help to so many." - Community Member</blockquote>
+</div>
+<br/>
+<br/>
+<h2>Galería</h2>
+<div class="gallery">
+<img alt="Gallery Photo" src="/imgs1/photo1.jpeg"/>
+<img alt="Gallery Photo" src="/imgs1/photo2.jpeg"/>
+<img alt="Gallery Photo" src="/imgs1/photo3.jpeg"/>
+<img alt="Gallery Photo" src="/imgs1/photo4.jpg"/>
+<!-- Add more photos as needed -->
+</div>
+</div>
+</section>
+<footer class="footer">
+<div class="container">
+<p>© Club Rotario Sunrise 2024. Todos los derechos reservados.</p>
+<ul class="social-links">
+<li><a th:href="@{/api/Facebook/}">Facebook (en inglés)</a></li>
+<li><a th:href="@{/api/insta/}">Instagram (en inglés)</a></li>
+<li><a href="#">Twitter</a></li>
+</ul>
+</div>
+</footer>
+<style>
+ /* Base Styles for Small Devices */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: rgb(241, 249, 254);
+    color: #333;
+    padding-top: 90px; /* Ensure content doesn't go under the navbar */
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+h1, h2, p {
+    margin: 20px 0;
+}
+
+  /* Navbar Styles */
+        .navbar {
+            background-color: white;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar .logo img {
+            width: 80%;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+
+        .menu-toggle .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #004579;
+            margin: 4px 0;
+            transition: 0.4s;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            margin: 0 10px;
+        }
+
+        .menu li a {
+            color: #004579;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .menu li a:hover {
+            color: #f0a500;
+        }
+
+/* Hero Section */
+.hero {
+    background: url('/imgs1/aboutimg.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 60px 0;
+    background-color: bisque;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin: 0;
+    animation: fadeInDown 1s;
+    color: white;
+}
+
+.hero p {
+    font-size: 1.2em;
+    animation: fadeInUp 1s;
+    color: #004579;
+}
+
+/* About Us Section */
+.about-us {
+    padding: 30px 0;
+    background: #fff;
+}
+
+.about-us h2 {
+    font-size: 1.8em;
+    border-bottom: 2px solid bisque;
+    padding-bottom: 10px;
+    color: #004579;
+}
+
+.about-us p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* Team Section */
+.team {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+    border: 3px solid bisque;
+}
+
+.team-member img:hover {
+    transform: scale(1.1);
+}
+
+/* Testimonials Section */
+.testimonials blockquote {
+    font-style: italic;
+    background: bisque;
+    padding: 20px;
+    border-left: 10px solid #004579;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.video-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.video-section video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Join Us Section */
+.section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.join-us {
+    background-color: #2a6ebd;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.join-us:hover {
+    background-color: #1e4f8c;
+}
+
+.join-us a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.join-us a:hover {
+    text-decoration: none;
+}
+
+/* Gallery Section */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    flex: 1;
+    margin: 10px;
+    width: calc(50% - 20px);
+    transition: transform 0.3s;
+    border: 3px solid bisque;
+    border-radius: 5px;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+.footer {
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #004579;
+}
+
+.footer .social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer .social-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer .social-links li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer .social-links li a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries for Responsiveness */
+
+/* Large Tablets and Small Desktops */
+@media (max-width: 1200px) {
+    .navbar .logo img {
+        width: 250px;
+    }
+
+    .hero h1 {
+        font-size: 3.5em;
+    }
+
+    .hero p {
+        font-size: 1.5em;
+    }
+
+    .team-member img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .gallery img {
+        width: calc(33% - 20px);
+    }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .navbar .logo img {
+        width: 200px;
+    }
+
+    .hero h1 {
+        font-size: 3em;
+    }
+
+    .hero p {
+        font-size: 1.3em;
+    }
+
+    .team-member img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .gallery img {
+        width: calc(50% - 20px);
+    }
+}
+
+ /* Toggle Button */
+        .navbar .menu-toggle {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: #004579;
+        }
+
+        /* Media Queries for Mobile */
+        @media (max-width: 768px) {
+		
+            .navbar .container {
+                flex-direction: column;
+                 align-items:flex-start;
+               height: auto;
+                
+            }
+
+            .navbar .logo img{
+                width: 360px !important;
+            }
+
+            .navbar .menu {
+                display: none;
+                flex-direction: column;
+                margin-right: 0;
+            }
+         
+
+            .navbar .menu li {
+                margin: 10px 0;
+            }
+
+            .navbar .menu-toggle {
+                display: block;
+                padding-right: 30px;
+                padding-top: 20px;
+                
+            }
+
+            .navbar .menu.active {
+                display: flex;
+                width: 100%;
+                align-items: center;
+             
+            }
+        }
+/* Small Phones */
+@media (max-width: 480px) {
+    .navbar .logo img {
+        width: 150px;
+    }
+
+    .navbar .menu {
+        gap: 5px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+
+    .team-member img {
+        width: 60px;
+        height: 60px;
+    }
+    
+}
+
+/* Extra Small Phones */
+@media (max-width: 360px) {
+    .navbar .logo img {
+        width: 120px;
+    }
+
+    .hero h1 {
+        font-size: 1.8em;
+    }
+
+    .hero p {
+        font-size: 0.9em;
+    }
+
+    .team-member img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .gallery img {
+        width: calc(100% - 10px);
+    }
+}
+
+
+        
+    </style>
+<script>
+        document.getElementById('mobile-menu').addEventListener('click', function () {
+            const menu = document.getElementById('menu');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !isExpanded);
+            menu.toggleAttribute('hidden');
+        });
+    </script>
+<script>
+         document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.menu').classList.toggle('active');
+        });
+    </script>
+<script src="/scripts/language.js"></script></body>
+</html>

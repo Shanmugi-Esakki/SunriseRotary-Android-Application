@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sunrise Rotary News &amp; Media</title>
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
+<style>
+		 /* Navbar Styles */
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        button {
+            background-color: #004579;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s, transform 0.3s;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #003354;
+            transform: translateY(-3px);
+        }
+
+        .navbar {
+            background-color: white;
+            color: #fff;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar .logo img {
+            width: 80%;
+           
+        }
+
+         .menu {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+         .menu li {
+            margin: 0 10px;
+            gap: 40px;
+        }
+
+         .menu li a {
+            color: #004579;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+         .menu li a:hover {
+            color: #f0a500;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #77aaff 3px solid;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        header ul li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+
+        .hero {
+            background: url('/imgs1/newsimg.jpeg') no-repeat center center;
+            background-size: cover;
+            /* Ensures the image covers the entire hero section */
+            height: 400px;
+            color: #fff;
+            text-align: center;
+            padding-top: 150px;
+            margin-top: 50px; /* Added margin-top to avoid content being hidden behind navbar */
+        }
+
+        .hero h1 {
+            margin: 0;
+            font-size: 48px;
+            animation: fadeInDown 2s;
+        }
+
+        .hero p {
+            margin: 0;
+            font-size: 24px;
+            animation: fadeInUp 2s;
+        }
+
+        .hero button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #fff;
+            background: #004579;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .hero button:hover {
+            background: bisque;
+            color: #333
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 40px 0;
+            font-size: 32px;
+            font-weight: bold;
+            color: #003354;
+        }
+
+        .news-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .news-card {
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+
+        .news-card img {
+            width: 100%;
+        }
+
+        .news-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .category-list {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .category-list div {
+            padding: 10px 20px;
+            background: #004579;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .category-list div:hover {
+            background: bisque;
+            color: #333;
+        }
+
+        .media-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .media-gallery img,
+        .media-gallery video {
+            width: calc(33.333% - 20px);
+            margin: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .media-gallery img:hover,
+        .media-gallery video:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        .footer {
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            background-color: #004579;
+        }
+
+        .footer .social-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer .social-links li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .footer .social-links li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer .social-links li a:hover {
+            text-decoration: underline;
+        }
+        /* Media Queries */
+@media (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+
+    .navbar .logo img {
+        width: 300px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        width: 95%;
+    }
+
+    .navbar .logo img {
+        width: 250px;
+    }
+
+    .navbar .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .menu li {
+        margin: 5px 0;
+    }
+
+    .hero {
+        height: 300px;
+        padding-top: 100px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero button {
+        padding: 8px 16px;
+        font-size: 1rem;
+    }
+
+    .news-card {
+        min-width: 250px;
+    }
+
+    .media-gallery img,
+    .media-gallery video {
+        width: calc(50% - 20px);
+    }
+}
+ /* Toggle Button */
+        .navbar .menu-toggle {
+            display: none;
+            font-size: 30px;
+            cursor: pointer;
+            color: #004579;
+        }
+
+        /* Media Queries for Mobile */
+        @media (max-width: 768px) {
+            .navbar .container {
+                flex-direction: column;
+                align-items:flex-start;
+                height: auto;
+                
+            }
+
+            .navbar .logo img {
+                width: 360px !important;
+            }
+
+            .navbar .menu {
+                display: none;
+                flex-direction: column;
+                margin-right: 0;
+            }
+         
+
+            .navbar .menu li {
+                margin: 10px 0;
+            }
+
+            .navbar .menu-toggle {
+                display: block;
+                padding-right: 30px;
+                padding-top: 20px;
+                
+            }
+
+            .navbar .menu.active {
+                display: flex;
+                width: 100%;
+                align-items: center;
+                 position: relative;
+                z-index: 1;
+            }
+        }
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.8rem;
+    }
+
+    .hero button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .category-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category-list div {
+        margin: 5px 0;
+    }
+
+    .footer .social-links li {
+        margin: 5px;
+    }
+}
+    </style>
+</head>
+<body style="background-color: floralwhite">
+<nav class="navbar">
+<div class="container">
+<div class="logo">
+<a href="/"><img alt="Sunrise Rotary Club Logo" src="/imgs1/Sunrise Rotary.png"/></a>
+</div>
+<span class="menu-toggle">☰</span>
+<ul class="menu">
+<li><a href="/">Home</a></li>
+<li><a th:href="@{/api/about/}">About Us</a></li>
+<li><a th:href="@{/api/news/}">News-Media</a></li>
+<li><a th:href="@{/api/serviceprojects/}">Service Projects</a></li>
+<li><a th:href="@{/api/contact/}">Contact Us</a></li>
+<li><a th:href="@{/api/login}">Login</a></li>
+<div id="google_translate_element"></div>
+</ul>
+</div>
+</nav>
+<section class="hero">
+<h1>Sunrise Rotary News &amp; Media</h1>
+<p style="text-align: center;">Stay Updated with Our Latest News and Stories</p>
+<button>Subscribe to Our Newsletter</button>
+</section>
+<br/>
+<section class="container">
+<div class="section-title">Featured News</div>
+<div class="news-grid">
+<div class="news-card">
+<img alt="Featured News" src="/imgs1/featured.jpg"/>
+<h2>Community Garden By Sunrise</h2>
+<p>Our club members came together to build a community garden, providing fresh produce and a place for residents to connect and learn about sustainable gardening practices.</p>
+<button>Read More</button>
+</div>
+</div>
+</section>
+<br/>
+<section class="container">
+<div class="section-title">Latest News</div>
+<div class="news-grid">
+<div class="news-card">
+<img alt="Latest News 1" src="/imgs1/photo1.jpeg"/>
+<h2> Sunrise Launches Community Clean-Up Initiative</h2>
+<p>Our Rotary Club members are joining forces to tackle local litter hotspots and beautify our community parks.</p>
+<button>Read More</button>
+</div>
+<div class="news-card">
+<img alt="Latest News 2" src="/imgs1/photo2.jpeg"/>
+<h2>Successful Fundraiser for Local School Supplies Drive</h2>
+<p> See how our efforts are supporting education and making a difference for students in our area.</p>
+<button>Read More</button>
+</div>
+<div class="news-card">
+<img alt="Latest News 3" src="/imgs1/photo3.jpeg"/>
+<h2> Sunrise Hosts Health and Wellness Fair</h2>
+<p>Learn more about the event schedule and how you can participate in promoting healthy living in our community.</p>
+<button>Read More</button>
+</div>
+</div>
+</section>
+<br/>
+<section class="container">
+<div class="section-title">Categories</div>
+<div class="category-list">
+<div>Club Events</div>
+<div>Community Projects</div>
+<div>Member Highlights</div>
+<div>Rotary International News</div>
+</div>
+</section>
+<br/>
+<section class="container">
+<div class="section-title">Featured Stories</div>
+<div class="news-grid">
+<div class="news-card">
+<img alt="Featured Story 1" src="/imgs1/photo4.jpg"/>
+<h2>Supports Local School</h2>
+<p>Our club recently donated new computers and supplies to the local elementary school, enhancing the learning environment for students.</p>
+<button>Read Full Story</button>
+</div>
+<div class="news-card">
+<img alt="Featured Story 2" src="/imgs1/photo5.jpeg"/>
+<h2>Hosts Annual Charity Run</h2>
+<p>The Sunrise Rotary Club successfully organized its annual charity run, raising funds for local healthcare initiatives. Participants enjoyed a day of fitness and community spirit.</p>
+<button>Read Full Story</button>
+</div>
+<div class="news-card">
+<img alt="Featured Story 3" src="/imgs1/photo7.webp"/>
+<h2>Tree Planting Drive</h2>
+<p>Our members took part in a tree planting drive aimed at creating more green spaces in the community. Over 200 trees were planted in various parks and public areas.</p>
+<button>Read Full Story</button>
+</div>
+</div>
+</section>
+<br/>
+<section class="container">
+<div class="section-title">Media Gallery</div>
+<div class="media-gallery">
+<div class="video-container">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/pFvXoauw6yY" width="560"></iframe>
+</div>
+<img alt="Media 4" src="/imgs1/photo1.jpeg"/>
+<div class="video-container">
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" height="315" src="https://www.youtube.com/embed/8b3Ea2o9JYA" width="560"></iframe>
+</div>
+<img alt="Media 6" src="/imgs1/photo9.webp"/>
+</div>
+</section>
+<footer class="footer">
+<div class="container">
+<p style="text-align: center;">© 2024 Sunrise Rotary Club. All rights reserved.</p>
+<ul class="social-links">
+<li><a th:href="@{/api/Facebook/}">Facebook</a></li>
+<li><a th:href="@{/api/insta/}">Instagram</a></li>
+<li><a href="#">Twitter</a></li>
+</ul>
+</div>
+</footer><script>
+		
+		  document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.menu').classList.toggle('active');
+        });
+	</script>
+<script src="/scripts/language.js"></script></body>
+</html>
